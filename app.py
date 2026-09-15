@@ -14,3 +14,33 @@ st.write(
 )
 
 st.info("Upload and AI analysis features are coming next.")
+import streamlit as st
+
+st.set_page_config(
+    page_title="ProposalIQ | AI RFP Analyzer",
+    page_icon="📄",
+    layout="wide"
+)
+
+st.title("📄 ProposalIQ")
+st.subheader("AI-Powered RFP & Proposal Analyzer")
+
+st.write(
+    """
+    ProposalIQ helps proposal teams turn complex RFP documents into
+    clear, actionable intelligence — making it easier to identify
+    requirements, risks, deadlines, and response priorities.
+    """
+)
+
+st.divider()
+
+st.markdown("### What ProposalIQ will analyze")
+
+st.write("✓ Key RFP requirements")
+st.write("✓ Submission deadlines and deliverables")
+st.write("✓ Compliance items")
+st.write("✓ Potential risks and red flags")
+st.write("✓ Proposal response priorities")
+
+st.info("Portfolio demonstration project created by Michelle Alva")
