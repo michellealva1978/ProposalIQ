@@ -44,3 +44,13 @@ st.write("✓ Potential risks and red flags")
 st.write("✓ Proposal response priorities")
 
 st.info("Portfolio demonstration project created by Michelle Alva")
+
+st.markdown("### Upload an RFP")
+
+uploaded_file = st.file_uploader(
+    "Choose an RFP document",
+    type=["pdf"]
+)
+
+if uploaded_file is not None:
+    st.success(f"✓ {uploaded_file.name} uploaded successfully!")
