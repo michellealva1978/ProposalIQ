@@ -1,5 +1,5 @@
 import streamlit as st
-
+from pypdf import PdfReader
 st.set_page_config(
     page_title="ProposalIQ",
     page_icon="📄",
@@ -54,3 +54,10 @@ uploaded_file = st.file_uploader(
 
 if uploaded_file is not None:
     st.success(f"✓ {uploaded_file.name} uploaded successfully!")
+reader = PdfReader(uploaded_file)
+    rfp_text = ""
+
+    for page in reader.pages:
+        rfp_text += page.extract_text() or ""
+
+    st.write(f"ProposalIQ successfully read {len(reader.pages)} pages.")
