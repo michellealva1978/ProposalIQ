@@ -54,7 +54,8 @@ uploaded_file = st.file_uploader(
 
 if uploaded_file is not None:
     st.success(f"✓ {uploaded_file.name} uploaded successfully!")
-reader = PdfReader(uploaded_file)
+
+    reader = PdfReader(uploaded_file)
     rfp_text = ""
 
     for page in reader.pages:
